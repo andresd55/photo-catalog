@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Dancing Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/DancingScript.woff2) format('woff2')
+}
+body{
+    font-family: "Dancing Script";
+    text-align: center;
+    background-color: #02010a;
+}
+img{
+    box-shadow: 2px 2px 2px 2px #02010a;
+    border: solid 1px black;
+}
+@keyframes slidein{
+    0%   {margin-top: 150%}
+    60%  {margin-top: -5%}
+    100% {margin-top: 0%}
+}
+header{
+    color: white;
+    background-color: #5b7989;
+    border-radius: 10px 10px 0px 0px;
+    text-shadow: 2px 2px 2px #02010a;
+    max-width: 900px;
+    margin: auto;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    animation-name: slidein;
+    animation-duration: 1s;
+}
+h1{
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+    margin-left: 4%;
+}
+nav{
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    font-weight: bold;
+    text-align: center;
+}
+.no-decoration{
+    text-decoration: none;
+}
+
+@media (min-width: 900px) {
+    nav{
+        width: 30%;
+    }
+    h1{
+        width: 65%;
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+
+#contenido{
+    margin: auto;
+    max-width: 900px;
+}
+#central-image{
+    background-color: #82c3a6;
+    padding: 3vh;
+}
+#central-image img{
+    width: 80%;
+}
+#secundary-image{
+    background-color: #d5c75f;
+    padding: 3vh;
+}
+#secundary-image img{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@keyframes girar-img {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(10deg);}
+}
+
+@keyframes mover-img {
+    from {transform: translate(0px, 0px);}
+    to {transform: translate(20px, -5px);}
+}
+#secundary-image img.left:hover{
+    animation-name: girar-img;
+    animation-duration: 0.5s;
+}
+#secundary-image img.rigth:hover{
+    animation-name: mover-img;
+    animation-duration: 0.5s;
+}
+#secundary-image img:hover{
+    box-shadow: 2px 2px 2px 2px #82c3a6;
+    border: solid 2px black;
+    cursor: pointer;
+    animation-name: girar-img;
+    animation-duration: 0.5s;
+}
+#secundary-image img:first-child{
+    margin-bottom: 2vh;
+}
+#galery{
+    background-color: #d5c75f;
+    padding: 3vh;
+}
+#galery img{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2vh;
+}
+#galery img:first-child{
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#galery img:nth-child(even){/*(impar)odd, (par)even, */
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+#galery img:nth-child(3){/*(impar)odd, (par)even, */
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+@media (min-width: 900px) {
+    #galery img{
+        width: 25%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+@media (min-width: 900px) {
+    #secundary-image img{
+        width: 40%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    #secundary-image img:first-child{
+        margin-bottom: 0vh;
+    }
+}
+#secundary-image img:first-child{
+    margin-right: 4.5%;
+    margin-left: 4.5%;
+}
+
+footer{
+    border-radius: 0px 0px 10px 10px;
+    background-color: #C6d5c5;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+footer > div{
+    flex-grow: 1;
+    width: 80%;
+    text-align: left;
+    margin-left: 5%;
+}
+footer{
+    padding-bottom: 4vh;
+}
+
+footer a{
+    color: inherit;
+}
+footer img{
+    box-shadow: none;
+    border: none;
+    margin-right: 1vh;
+    margin-top: 1vh;
+}
+
+@media (min-width:900px){
+    footer > div{
+        flex-grow: 1;
+        width: 20%;
+    }
+}
